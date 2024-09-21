@@ -97,7 +97,7 @@ def transcribe_audio(audio_file, api_key):
     try:
         with open(audio_file, 'rb') as file:
             completion = client.audio.transcriptions.create(
-                model="distil-whisper-large-v3-en",
+                model="whisper-large-v3",
                 file=file,
                 response_format="text"
             )
